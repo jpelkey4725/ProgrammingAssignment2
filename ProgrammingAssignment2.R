@@ -3,11 +3,16 @@
   
   makeCacheMatrix <- function(x = matrix()) {
     
+    #Set inverse matrix 'inv' to Null.  
+    
       inv <- NULL
       set <- function(y) {
         x <<- y
         inv <<- NULL
       }
+      
+      #using solve function to get inverse
+      
       get <- function() x
       
       setinv <- function(solve) inv <<- solve
@@ -31,3 +36,4 @@ cacheInv <- function(x, ...) {
   inv
   ## return inverse of matrix 'inv'
 }
+
